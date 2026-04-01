@@ -1,0 +1,335 @@
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(201,165,106,0.3), 0 0 40px rgba(201,165,106,0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(201,165,106,0.5), 0 0 60px rgba(201,165,106,0.3);
+  }
+}
+
+/* Clases de animación */
+.animated-hero {
+  animation: fadeInUp 1s ease-out;
+}
+
+.floating-image {
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.floating-image:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Hero personalizado */
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000000 !important;
+  letter-spacing: -1px;
+  animation: slideInLeft 0.8s ease-out;
+  position: relative;
+  display: inline-block;
+  text-shadow: none !important;
+}
+
+.hero-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c9a56a, #3b2820);
+  animation: expandWidth 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes expandWidth {
+  to {
+    width: 100%;
+  }
+}
+
+.hero-description {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #000000 !important;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  text-shadow: none !important;
+}
+
+.hero-image-img {
+  max-width: 300px;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+  transition: filter 0.3s ease;
+  border-radius: 20px;
+}
+
+.floating-image:hover .hero-image-img {
+  filter: drop-shadow(0 15px 40px rgba(201,165,106,0.4));
+}
+
+/* Contenedor de video */
+.video-section {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.video-container {
+  animation: fadeInUp 1.2s ease-out;
+  background: linear-gradient(135deg, rgba(201,165,106,0.1) 0%, rgba(244,230,223,0.2) 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(201,165,106,0.15) 50%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+.video-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(201,165,106,0.3), rgba(244,230,223,0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover::after {
+  opacity: 1;
+}
+
+.video-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.video-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 40px;
+  font-weight: 700;
+  color: #3b2820;
+  background: linear-gradient(135deg, #c9a56a 0%, #3b2820 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+  animation: pulse 2s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 700px;
+  height: 600px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  object-fit: cover;
+  border: 3px solid rgba(201,165,106,0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.video-player:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  border-color: rgba(201,165,106,0.6);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.video-caption {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #5a514a;
+  font-size: 16px;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Elementos decorativos */
+.decorative-element {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(201,165,106,0.3), rgba(244,230,223,0.4));
+  filter: blur(40px);
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.decorative-element:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+
+.decorative-element:nth-child(2) {
+  top: 60%;
+  right: 5%;
+  animation-delay: 1s;
+  animation-duration: 5s;
+  width: 120px;
+  height: 120px;
+}
+
+/* Efecto parallax suave */
+@media (prefers-reduced-motion: no-preference) {
+  .hero {
+    transform-style: preserve-3d;
+  }
+  
+  .hero-content {
+    transform: translateZ(20px);
+  }
+  
+  .hero-image {
+    transform: translateZ(10px);
+  }
+}
+
+/* Efectos hover en navegación */
+.main-nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c9a56a;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::before {
+  width: 100%;
+}

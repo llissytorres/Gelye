@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/Pagina_principal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="../imagenes/logo.png.jpeg" alt="Gelyex Logo" style="height: 60px;">
+        </div>
+        <nav class="main-nav">
+          <a href="index.html">Inicio</a>
+          <a href="../html/Productos.html">Productos</a>
+          <a href="../html/Consejos.html">Consejos</a>
+          <a href="../html/Nosotros.html">Nosotros</a>
+          <a href="../html/Contactos.html">Contacto</a>
+        </nav>
+        <div class="cart">
+          <button id="cart-toggle" aria-label="Abrir carrito">🛒 <span id="cart-count" class="cart-count">0</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-video-bg">
+        <video autoplay muted loop playsinline>
+          <source src="../videos/PixVerse_V5.6_Image_Text_360P_crea_una_morena_ (2).mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5.
+        </video>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h2>Cuidamos tu cabello con detalle,<br>para que refleje lo mejor de tu estilo</h2>
+          <p>Potencia tu belleza con productos naturales y resultados profesionales que nutren, protegen y realzan tu cabello en cada aplicación.</p>
+          <a class="btn btn-primary" href="../html/Productos.html">Explora nuestros productos</a>
+          <ul class="hero-meta">
+            <li>Belleza,</li>
+            <li>cosmética</li>
+            <li>y cuidado personal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products container">
+      <h2>Productos Destacados</h2>
+      <p class="section-subtitle">Descubre nuestra selección especial de productos premium</p>
+      <div class="product-carousel">
+        <button class="carousel-btn prev-btn" aria-label="Anterior">‹</button>
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            <article class="product-slide" data-name="Shampoo" data-price="350.00">
+              <div class="product-image">
+                <img src="../imagenes/shampoo.png.jpeg" alt="Shampoo hidratante">
+              </div>
+              <div class="product-info">
+                <span class="product-tag">Más vendido</span>
+                <h4>Shampoo</h4>
+                <p>Limpieza profunda con ingredientes naturales</p>
+                <div class="product-price">RD$ 350</div>
+                <button class="btn btn-add-carousel">Agregar al Carrito</button>
+              </div>
+            </article>
+
+            <article class="product-slide" data-name="Mascarilla" data-price="600.00">
+              <div class="product-image">
+                <img src="../imagenes/mascarilla.png.jpeg" alt="Mascarilla capilar">
+              </div>
+              <div class="product-info">
+                <span class="product-tag">Recomendado</span>
+                <h4>Mascarilla capilar</h4>
+                <p>Nutrición profunda para cabello dañado</p>
+                <div class="product-price">RD$ 600</div>
+                <button class="btn btn-add-carousel">Agregar al Carrito</button>
+              </div>
+            </article>
+
+            <article class="product-slide" data-name="Gotitas de brillo" data-price="450.00">
+              <div class="product-image">
+                <img src="../imagenes/gotitasdebrillo.png.jpeg" alt="Gotitas de brillo">
+              </div>
+              <div class="product-info">
+                <span class="product-tag">Premium</span>
+                <h4>Gotitas de brillo</h4>
+                <p>Brillo natural sin residuos pesados</p>
+                <div class="product-price">RD$ 450</div>
+                <button class="btn btn-add-carousel">Agregar al Carrito</button>
+              </div>
+            </article>
+
+            <article class="product-slide" data-name="Tónico antí-caída" data-price="1000.00">
+              <div class="product-image">
+                <img src="../imagenes/tónicoanticaida.png.jpeg" alt="Tónico antí-caída">
+              </div>
+              <div class="product-info">
+                <span class="product-tag">Mejor valorado</span>
+                <h4>Tónico antí-caída</h4>
+                <p>Fortalece y estimula el crecimiento</p>
+                <div class="product-price">RD$ 1,000</div>
+                <button class="btn btn-add-carousel">Agregar al Carrito</button>
+              </div>
+            </article>
+
+            <article class="product-slide" data-name="Leave-in" data-price="350.00">
+              <div class="product-image">
+                <img src="../imagenes/leavein.png.jpeg" alt="Leave-in">
+              </div>
+              <div class="product-info">
+                <span class="product-tag">Esencial</span>
+                <h4>Leave-in</h4>
+                <p>Hidratación sin enjuague todo el día</p>
+                <div class="product-price">RD$ 350</div>
+                <button class="btn btn-add-carousel">Agregar al Carrito</button>
+              </div>
+            </article>
+
+            <article class="product-slide" data-name="Gelatina" data-price="350.00">
+              <div class="product-image">
+                <img src="../imagenes/gelatina.png.jpeg" alt="Gelatina">
+              </div>
+              <div class="product-info">
+                <span class="product-tag">Popular</span>
+                <h4>Gelatina</h4>
+                <p>Definición y fijación perfecta</p>
+                <div class="product-price">RD$ 350</div>
+                <button class="btn btn-add-carousel">Agregar al Carrito</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-btn next-btn" aria-label="Siguiente">›</button>
+      </div>
+      <div class="carousel-dots"></div>
+    </section>
+
+    <section class="cta container">
+
+  </main>
+ <section class="why container">
+      <h3>¿Por qué elegirnos?</h3>
+      <div class="icons">
+        <div class="icon">
+          <div class="circle">🍂</div>
+          <p>Naturaleza en cada ingrediente</p>
+        </div>
+        <div class="icon">
+          <div class="circle">🦔</div>
+          <p>Cuidado ético</p>
+        </div>
+        <div class="icon">
+          <div class="circle">🧴</div>
+          <p>Resultados profesionales en cada uso</p>
+        </div>
+      </div>
+    </section>
+
+
+  <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h4>Carrito</h4>
+      <div class="cart-header-actions">
+        <button id="cart-clear" aria-label="Vaciar carrito" title="Vaciar carrito">🗑️</button>
+        <button id="cart-close" aria-label="Cerrar carrito">✕</button>
+      </div>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span id="cart-total">RD$ 0.00</span></div>
+      <button id="checkout-btn" class="btn btn-primary">Ir a pagar</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <nav class="footer-nav">
+          <p>Puro - Elegante - Real</p>
+        </nav>
+        <div class="social">
+          <a href="https://instagram.com/gelyex" aria-label="Instagram">📷</a>
+          <a href="https://facebook.com/gelyex" aria-label="Facebook">📘</a>
+          <a href="https://twitter.com/gelyex" aria-label="Twitter">🐦</a>
+          © 2026 Gelyex
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/Pagina_principal.js"></script>
+</body>
+</html>

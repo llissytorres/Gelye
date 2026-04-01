@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos — Gelyex Defined by quality</title>
+  <link rel="stylesheet" href="../css/Productos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container header-inner">
+        <div class="brand">
+           <img src="../imagenes/logo.png.jpeg" alt="Gelyex Logo" style="height: 60px;">
+        </div>
+        <nav class="main-nav">
+          <a href="../index.html">Inicio</a>
+          <a href="Productos.html">Productos</a>
+          <a href="Consejos.html">Consejos</a>
+          <a href="Nosotros.html">Nosotros</a>
+          <a href="Contactos.html">Contacto</a>
+        </nav>
+        <div class="cart">
+          <button id="cart-toggle" aria-label="Abrir carrito">🛒 <span id="cart-count" class="cart-count">0</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h2>Nuestros Productos</h2>
+          <p>El cuidado que tu cabello merece.
+          Gelyex transforma cada hebra con fórmulas de lujo que nutren, 
+          reparan y elevan tu belleza natural.
+          Más que productos, es una experiencia.</p>
+        </div>
+        <div class="hero-image">
+          <img src="../imagenes/productos.png" alt="productos de cabello">
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="products-header">
+        <div class="products-title-section">
+          <h2>Nuestros Productos</h2>
+          <p class="products-count">Mostrando <span id="product-count">7</span> productos</p>
+        </div>
+        
+        <div class="products-controls">
+          <div class="search-box">
+            <input type="text" id="product-search" placeholder="Buscar productos..." />
+            <span class="search-icon">🔍</span>
+          </div>
+          
+          <div class="filter-group">
+            <label for="price-filter">Precio:</label>
+            <select id="price-filter">
+              <option value="all">Todos</option>
+              <option value="low">Menor a RD$ 400</option>
+              <option value="mid">RD$ 400 - RD$ 700</option>
+              <option value="high">Mayor a RD$ 700</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="sort-filter">Ordenar:</label>
+            <select id="sort-filter">
+              <option value="default">Destacados</option>
+              <option value="price-low">Precio: Menor a Mayor</option>
+              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="name">Nombre A-Z</option>
+            </select>
+          </div>
+          
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="grid" title="Vista de cuadrícula">☷</button>
+            <button class="view-btn" data-view="list" title="Vista de lista">☰</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="products-grid" id="products-grid" class="grid collections">
+        <article class="card product-item" data-name="Shampoo" data-price="350.00" data-category="cuidado">
+          <div class="product-badge">Popular</div>
+          <img src="../imagenes/shampoo.png.jpeg" alt="Shampoo hidratante">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Shampoo</h4>
+            <p>Nuestro shampoo limpia profundamente el cabello y el cuero cabelludo, eliminando impurezas y exceso de grasa. Deja el pelo suave, brillante y saludable. Ideal para uso diario.</p>
+            <div class="card-price">RD$ 350</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+
+         <article class="card product-item" data-name="Mascarilla" data-price="600.00" data-category="cuidado">
+          <div class="product-badge hot">Más vendido</div>
+          <img src="../imagenes/mascarilla.png.jpeg" alt="Mascarilla capilar">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Mascarilla capilar</h4>
+            <p>La mascarilla capilar nutre e hidrata el cabello en profundidad. Ayuda a reparar el pelo dañado, reducir el frizz y devolverle la suavidad y el brillo natural. Se recomienda usar de 1 a 2 veces por semana.</p>
+            <div class="card-price">RD$ 600</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+
+      <article class="card product-item" data-name="Gotitas de brillo" data-price="450.00" data-category="cuidado">
+          <div class="product-badge new">Nuevo</div>
+          <img src="../imagenes/gotitasdebrillo.png.jpeg" alt="Gotitas de brillo">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Gotitas de brillo</h4>
+            <p>Las gotitas de brillo aportan un acabado luminoso y saludable al cabello, realzando su brillo natural sin dejar residuos pesados. Perfectas para un toque final de estilo.</p>
+            <div class="card-price">RD$ 450</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-item" data-name="Tónico antí-caída" data-price="1000.00" data-category="tratamiento">
+          <div class="product-badge premium">Premium</div>
+          <img src="../imagenes/tónicoanticaida.png.jpeg" alt="Tónico antí-caída">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Tónico antí-caída</h4>
+            <p>El tónico anticaída fortalece la raíz del cabello y ayuda a reducir la caída. Estimula el crecimiento y mejora la salud del cuero cabelludo. Es fácil de aplicar y no necesita enjuague.</p>
+            <div class="card-price">RD$ 1,000</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-item" data-name="Vaselina" data-price="150.00" data-category="cuidado">
+          <div class="product-badge">Oferta</div>
+          <img src="../imagenes/vaselina.png.jpeg" alt="Vaselina">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Vaselina</h4>
+            <p>La vaselina es perfecta para hidratar y proteger el cabello, especialmente las puntas secas. Ayuda a sellar la humedad y aporta brillo. También es muy útil para el cuidado de cejas y baby hair.</p>
+            <div class="card-price"><span class="old-price">RD$ 250</span> RD$ 150</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card product-item" data-name="Leave-in" data-price="350.00" data-category="cuidado">
+          <img src="../imagenes/leavein.png.jpeg" alt="Leave-in">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Leave-in</h4>
+            <p>El leave-in es un tratamiento sin enjuague que hidrata y protege el cabello. Facilita el peinado, controla el frizz y deja el pelo más manejable y suave. Ideal para usar después del lavado.</p>
+            <div class="card-price">RD$ 350</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card product-item" data-name="Gelatina" data-price="350.00" data-category="estilo">
+          <img src="../imagenes/gelatina.png.jpeg" alt="Gelatina para cabello">
+          <div class="card-body">
+            <span class="card-category">Cuidado</span>
+            <h4>Gelatina</h4>
+            <p>La gelatina para el pelo ayuda a definir peinados y rizos, proporcionando fijación y brillo. Mantiene el peinado por más tiempo sin dejar residuos. Ideal para estilos creativos y duraderos.</p>
+            <div class="card-price">RD$ 350</div>
+            <div class="card-actions">
+              <button class="btn btn-primary btn-add">Agregar al Carrito</button>
+            </div>
+          </div>
+        </article>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h4>Carrito</h4>
+      <div class="cart-header-actions">
+        <button id="cart-clear" aria-label="Vaciar carrito" title="Vaciar carrito">🗑️</button>
+        <button id="cart-close" aria-label="Cerrar carrito">✕</button>
+      </div>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span id="cart-total">RD$0.00</span></div>
+      <button id="checkout-btn" class="btn btn-primary">Ir a pagar</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <nav class="footer-nav">
+                    <p>Puro - Elegante - Real</p>
+        </nav>
+        <div class="social">
+          <a href="https://instagram.com/gelyex" aria-label="Instagram">📷</a>
+          <a href="https://facebook.com/gelyex" aria-label="Facebook">📘</a>
+          <a href="https://twitter.com/gelyex" aria-label="Twitter">🐦</a>
+          © 2026 Gelyex
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/Pagina_principal.js"></script>
+  <script src="../js/productos.js"></script>
+  
+
+</body>
+</html>
